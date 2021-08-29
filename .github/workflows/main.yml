@@ -1,7 +1,9 @@
 name: Test two actions
 on:
-  workflow_dispatch:
   push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * MON"
 jobs:
   build:
     runs-on: ubuntu-latest
